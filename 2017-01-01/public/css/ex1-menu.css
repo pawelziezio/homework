@@ -1,0 +1,57 @@
+#mainmenu, #mainmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#mainmenu li {
+  background-color: #6c98bc;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  border-radius: 3px;
+  margin-top: 2px;
+  padding: 14px;
+}
+
+#mainmenu li a {
+  color: #0f0f0f;
+}
+
+#mainmenu > li {
+  position: relative;
+}
+
+#mainmenu > li ul {
+  position: absolute;
+  left: 102px;
+  top: -2px;
+}
+
+.ex1-menu ul ul {
+  display: none;
+}
+
+.ex1-menu ul li:hover > ul {
+  display: block;
+}
+
+.ex1-menu li:hover {
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 640px) {
+  ul li {
+    display: inline-block;
+  }
+
+  #mainmenu > li ul {
+    left: 0;
+    top: 50px;
+  }
+
+  #mainmenu {
+    margin-bottom: 100px;
+  }
+
+}

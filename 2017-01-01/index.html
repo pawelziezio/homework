@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <!-- style css -->
+    <!-- http://getbootstrap.com/components/ -->
+    <link href="public/vendors/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="all"/>
+    <link href="public/css/basic.css" type="text/css" rel="stylesheet" media="all"/>
+    <link href="public/css/ex1-menu.css" type="text/css" rel="stylesheet" media="all"/>
+
+    <!-- skrypty javascript -->
+    <!-- https://jquery.com/ -->
+    <script src="public/vendors/jquery/jquery-2.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- http://getbootstrap.com/components/ -->
+    <script src="public/vendors/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+
+<div class="container">
+    <!-- pasek górnego menu -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="">JFDD5 świąteczne zadania domowe cz. 1. <span
+                        class="glyphicon glyphicon-home"></span></a>
+            </div>
+        </div>
+    </nav>
+    <!-- ciało strony -->
+    <div class="container">
+        <div class="jumbotron">
+            <br/>
+
+
+            <!-- Zadanie #1 Begin -->
+            <div class="container">
+                <h2>Zadanie #1</h2>
+            </div>
+            <div id="exercise1">
+                <p>Stwórz menu (struktura jak na obrazku, wygląd dowolny) które dla szerokości przeglądarki powyżej
+                    640px będzie rysowane w poziomie a dla mniejszych w pionie.</p>
+                <p>
+                    <img src="public/img/menu-horizontal.png" alt="H"/>
+                    <img src="public/img/menu-vertical.png" alt="V"/>
+                </p>
+                <div class="ex1-menu">
+
+                    <ul id="mainmenu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Gallery</a><i class="arrow"></i>
+                            <ul>
+                                <li><a href="#">Latest</a></li>
+                                <li><a href="#">Archive</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- Zadanie #1 End -->
+
+            <!-- Zadanie #2 Begin -->
+            <div class="container">
+                <h2>Zadanie #2</h2>
+            </div>
+            <div id="exercise2">
+                <p>Uzupełnij funkcję run tak aby wyświetlała tabliczkę mnożenia od 1 do 10 w postaci:</p>
+                <pre>
+1  2  3  4  ...
+2  4  6  8
+3  6  9  12
+4  8  12 16
+...
+</pre>
+                <!-- Nie pisz statycznego wyświetlania, musi to być zrobione za pomocą pętli i dowolnej struktury html. -->
+                <button onclick="Exercise2.run()">Uruchom skrypt</button>
+                <pre>
+                <!--<script>-->
+var Exercise2 = {
+	run: function(){
+		console.warn('-- Exercise2 --');
+		// ...
+	}
+}
+                    <!--</script>-->
+                </pre>
+                <script>
+                  var Exercise2 = {
+                    run: function () {
+                      console.warn('-- Exercise2 --');
+                      for (var y = 1; y <= 10; y++) {
+                        var row = ' ';
+                        for (var x = 1; x <= 10; x++) {
+                          var product = x * y;
+                          if (product < 10) {
+                            row += ' ' + product + ' ';
+                          } else {
+                            row += ' ' + product;
+                          }
+                        }
+                        console.warn(row);
+                      }
+                    }
+                  }
+                </script>
+            </div>
+            <!-- Zadanie #2 End -->
+
+            <!-- Zadanie #3 Begin -->
+            <div class="container">
+                <h2>Zadanie #3</h2>
+            </div>
+            <div id="exercise3">
+                <p>Uzupełnij funkcję findOptimus(n) która wypisze w konsoli wszystkie liczby pierwsze od 0 do n</p>
+                <button onclick="Exercise3.run(97)">Uruchom skrypt</button>
+                <pre>
+                <!--<script>-->
+var Exercise3 = {
+	findOptimus: function( n ){
+		// ......
+	},
+	run: function( n ){
+		console.warn('-- Exercise3 --');
+		this.findOptimus( n );
+	}
+}
+                    <!--</script>-->
+                </pre>
+                <script>
+                  var Exercise3 = {
+                    findOptimus: function (n) {
+
+                      var liczbyPierwsze = [];
+
+                      function czyPierwsza(liczba) {
+                        if (liczba < 2)
+                          return false;
+                        for (var i = 2; i < liczba; i++) {
+                          if (liczba % i === 0)
+                            return false;
+                        }
+                        return true;
+                      }
+
+                      for (var z = 0; z < n; z++) {
+                        if (czyPierwsza(z)) {
+                          liczbyPierwsze.push(z);
+                        }
+                      }
+                      console.warn(liczbyPierwsze);
+                    },
+
+                    run: function (n) {
+                      console.warn('-- Exercise3 --');
+                      this.findOptimus(n);
+                    }
+                  }
+                </script>
+            </div>
+            <!-- Zadanie #3 End -->
+
+            <!-- Zadanie #4 Begin -->
+            <div class="container">
+                <h2>Zadanie #4</h2>
+            </div>
+            <div id="exercise4">
+                <p>Uzupełnij funkcję 'run' tak aby zmieniała co trzeci znak w tekście na wielką literę (upperCase)</p>
+                <!-- https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Array  -->
+                <button onclick="Exercise4.run()">Uruchom skrypt</button>
+                <pre>
+                <!--<script>-->
+var Exercise4 = {
+	textToUppercase: 'Wynik porównania pomiędzy regularnym wyrażeniem a łańcuchem znaków może utworzyć tablicę. Ta tablica ma własności i elementy, które przekazują informacje dotyczące porównania. Tablica jest wartością zwracaną przez RegExp.exec, String.match i String.replace.',
+	run: function( n ){
+		console.warn('-- Exercise4 --');
+		// ....
+		console.log( Exercise4.textToUppercase );
+	}
+}
+                    <!--</script>-->
+                </pre>
+                <script>
+                  var Exercise4 = {
+                    textToUppercase: 'Wynik porównania pomiędzy regularnym wyrażeniem a łańcuchem znaków może utworzyć tablicę. Ta tablica ma własności i elementy, które przekazują informacje dotyczące porównania. Tablica jest wartością zwracaną przez RegExp.exec, String.match i String.replace.',
+                    run: function (n) {
+                      console.warn('-- Exercise4 --');
+                      var nowyText = "";
+                      for (var i = 0; i < this.textToUppercase.length; i++) {
+                        if (i % 3 == 0)
+                          nowyText += this.textToUppercase.charAt(i).toUpperCase();
+                        else
+                          nowyText += this.textToUppercase.charAt(i);
+                      }
+                      this.textToUppercase = nowyText;
+
+                      console.log(Exercise4.textToUppercase);
+                    }
+                  }
+                </script>
+            </div>
+            <!-- Zadanie #4 End -->
+
+            <!-- Zadanie #5 Begin -->
+            <div class="container">
+                <h2>Zadanie #5</h2>
+            </div>
+            <div id="exercise5">
+                <p>Używając funkcji Array.prototype.map uzupełnij 'run' tak aby na każdym z elementów tablicy 'ppl'
+                    została użyta funkcja 'makeHappy' a wynik nadpisał dotychczasową tablicę 'ppl'</p>
+                <!-- https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Array  -->
+                <div class="sandbox"><!-- piaskownica --></div>
+                <button onclick="Exercise5.run()">Uruchom skrypt</button>
+                <pre>
+                <!--<script>-->
+var Exercise5 = {
+	ppl: ['Ala', 'Ela', 'Ula', 'Ola', 'Ewa', 'Iza', 'Ida', 'Iga'],
+	makeHappy: function(param){
+		return param + ' &#8226;&#7447;&#8226;';
+	},
+	run: function(){
+		console.warn('-- Exercise5 --');
+		// .......
+		$('#exercise5 .sandbox').html( Exercise5.ppl.join( '<br/>' ) )
+	}
+}
+                    <!--</script>-->
+                </pre>
+                <script>
+                  var Exercise5 = {
+                    ppl :  ['Ala', 'Ela', 'Ula', 'Ola', 'Ewa', 'Iza', 'Ida', 'Iga'],
+                    makeHappy: function (param) {
+                      return param + ' &#8226;&#7447;&#8226;';
+                    },
+                    run: function () {
+                      console.warn('-- Exercise5 --');
+                      this.ppl = this.ppl.map(this.makeHappy);
+                      $('#exercise5 .sandbox').html(Exercise5.ppl.join('<br/>'))
+                    }
+                  }
+                </script>
+            </div>
+            <!-- Zadanie #5 End -->
+        </div>
+        <!-- stopka -->
+        <footer>
+            &copy; 2016-2017 iSA
+        </footer>
+    </div>
+</div>
+</body>
+</html>

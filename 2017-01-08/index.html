@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <script>"use strict"</script>
+    <!-- style css -->
+    <!-- http://getbootstrap.com/components/ -->
+    <link href="public/vendors/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="all"/>
+    <link href="public/css/basic.css" type="text/css" rel="stylesheet" media="all"/>
+
+    <!-- skrypty javascript -->
+    <!-- https://jquery.com/ -->
+    <script src="public/vendors/jquery/jquery-2.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- http://getbootstrap.com/components/ -->
+    <script src="public/vendors/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="container">
+    <!-- pasek górnego menu - dekoracja -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="">JFDD5 świąteczne zadania domowe cz. 2. <span
+                        class="glyphicon glyphicon-home"></span></a>
+            </div>
+        </div>
+    </nav>
+    <!-- ciało strony -->
+    <div class="container">
+        <div class="jumbotron">
+
+
+            <!-- Zadanie #6 Begin -->
+
+            <div class="container">
+                <h2>Zadanie #6</h2>
+            </div>
+            <div id="exercise6">
+                <p>Korzystając tylko z komponentów bootstrapa odtwórz efekt z obrazka (sam wygląd, bez funkcjonalności).
+                    Wszystkie elementy znajdziesz na stronie http://getbootstrap.com/ w sekcjach CSS, Components i
+                    JavaScript.</p>
+                <!-- na samym dole pliku znajduje się podpowiedź, ale polecam pomęczyć sie samemu -->
+                <p>
+                    <img src="public/img/iSA_pd.jpg" alt=""/>
+                </p>
+
+                <br>
+                <br>
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    Otwórz okienko !
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Uwielbiam to okienko <span
+                                        class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="control-label">Tytuł</label>
+                                        <input type="text" class="form-control" id="recipient-name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="control-label">Opis:</label>
+                                        <textarea class="form-control" id="message-text"></textarea>
+                                    </div>
+                                </form>
+                                <form class="form-inline">
+                                    <label for="buttonGroup">Status:</label>
+                                    <div class="btn-group" role="group" aria-label="..." id="buttonGroup">
+                                        <button type="button" class="btn btn-default">Aktywne</button>
+                                        <button type="button" class="btn btn-default">Zawieszone</button>
+                                        <button type="button" class="btn btn-default">Nieaktywne</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="btn-group ">
+                                    <button type="button"
+                                            class="btn btn-default dropdown-toggle"
+                                            data-toggle="dropdown">
+                                        Anuluj
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a>Wyczyść</a></li>
+                                    </ul>
+                                </div>
+                                <label for="buttonZapisz">&nbsp &nbsp &nbsp</label>
+                                <button type="button" class="btn btn-success" id="buttonZapisz">Zapisz zmiany</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <hr/>
+
+
+            <!-- Zadanie #6 End -->
+
+            <!-- Zadanie #7 Begin -->
+            <div class="container">
+                <h2>Zadanie #7</h2>
+            </div>
+            <div id="exercise7">
+                <p>Wygeneruj aplikację React. Zbuduj licznik w oparciu o stan komponentu, używając
+                    <code>this.setState</code>, a następnie podłącz go do reduksa.</p>
+            </div>
+            <hr/>
+
+            <!-- Zadanie #7 End -->
+
+            <!-- Zadanie #8 Begin -->
+            <div class="container">
+                <h2>Zadanie #8</h2>
+            </div>
+            <div id="exercise8">
+                <p>Zbuduj formularz pozwalający na dodawanie kontaktów (dane zapisz w stanie, reduksie lub w
+                    local-storage).</p>
+            </div>
+            <hr/>
+
+            <!-- Zadanie #8 End -->
+
+            <!-- Zadanie #9 Begin -->
+            <div class="container">
+                <h2>Zadanie #9</h2>
+            </div>
+            <div id="exercise9">
+                <p>Wyświetl tabelkę na podstawie pliku z danymi pobranego asynchronicznie funkcją <code>fetch</code>
+                    (dane możesz wygenerować używając <a href="https://www.mockaroo.com/" target="_blank">www.mockaroo.com</a>).
+                </p>
+            </div>
+            <hr/>
+
+            <!-- Zadanie #9 End -->
+
+            <!-- Zadanie #10 Begin -->
+            <div class="container">
+                <h2>Zadanie #10</h2>
+            </div>
+            <div id="exercise10">
+                <p>Użyj <code>react-big-calendar</code> i dodaj w nim możliwość zapisywania wydarzeń.</p>
+            </div>
+            <!-- Zadanie #10 End -->
+
+        </div>
+    </div>
+    <!-- stopka -->
+    <footer>
+        &copy; 2017 iSA
+    </footer>
+</div>
+</body>
+</html>
+<!--
+ ")zralumrof( smrof i )elutyt w aknoki( snocihpylg ,)julunA unem enajiwzor( nwodpord ,)usutats iksicyzrp( spuorg nottub ,)okneiko( ladom :ytnenopmok ymejubezrtop ainadaz oget ainanokyw oD".split("").reverse().join("")
+ -->
